@@ -89,12 +89,6 @@ const leadershipData = [
     image: "/assets/img/Co Founder/Shah Sarbaz.png",
     linkedin: "https://linkedin.com/in/shah-sarbaz",
   },
-  {
-    name: "Samavia Khan",
-    role: "Co lead of Bayan e Yaran.",
-    image: "/assets/img/Co Founder/sma.jpg",
-    linkedin: "#",
-  },
 ];
 
 const coreTeamData = [

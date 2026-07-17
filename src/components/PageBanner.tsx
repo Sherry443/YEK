@@ -13,7 +13,7 @@ const PageBanner = ({
         <div className="page-heading">
           <div className="breadcrumb-sub-title">
             <h5 className="wow fadeInUp">
-              Our Mission: Food, Education, Medicine
+              Our Mission: Education, Healthcare, Climate Awarenes and Cultural Preservation.
             </h5>
             <h1 className="wow fadeInUp" data-wow-delay=".3s">
               {pageTitle ? pageTitle : pageName}

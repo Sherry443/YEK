@@ -22,7 +22,7 @@ const resolveLink = (link: string) => (link === "index" ? "/" : `/${link}`);
 const usefulLink: LinkItem[] = [
   { link: "index", text: "Home" },
   { link: "about", text: "About Us" },
-  { link: "projects", text: "Popular Projects" },
+  { link: "projects", text: "Projects" },
   { link: "team", text: "Our Team" },
 ];
 const legalLink: LinkItem[] = [

@@ -19,16 +19,14 @@ const TermsPage = () => {
                   <h3>Acceptance of Terms</h3>
                   <p>
                     By accessing or using the Yaran e Khair website, you agree
-                    to be bound by these Terms of Use. If you do not agree
-                    with any part of these terms, please do not use this
-                    website.
+                    to be bound by these Terms of Use.
                   </p>
                   <h3>About Yaran e Khair</h3>
                   <p>
                     Yaran e Khair (&quot;Friends of Goodness&quot;) is a
                     non-profit student initiative based in Garamchashma,
                     District Lower Chitral, Pakistan, working in Education,
-                    Healthcare, Rural Development, and Climate Change.
+                    Healthcare,community development and Climate Change.
                   </p>
                   <h3>Use of Content</h3>
                   <p>

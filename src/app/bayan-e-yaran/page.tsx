@@ -13,7 +13,7 @@ const newsletters = [
   {
     id: 1,
     title: "Bayan e Yaran",
-    date: "January 2025",
+    date: "Oct 2025",
     pdfUrl: "/assets/Bayaan.pdf",
   },
   // { id: 2, title: "Issue 02", date: "February 2025", pdfUrl: "/assets/newsletters/issue-02.pdf" },
