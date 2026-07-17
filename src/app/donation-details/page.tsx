@@ -17,9 +17,6 @@ const CausesPage = () => {
             <div className="col-lg-12">
               <div className="causes-details-items">
                 <div className="details-content style-2">
-                  <span className="sub-text">
-                    <i className="far fa-heart" /> water
-                  </span>
       
                   <form action="#" className="give-form">
         
