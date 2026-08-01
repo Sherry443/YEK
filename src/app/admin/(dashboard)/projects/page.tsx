@@ -63,6 +63,7 @@ export default async function AdminProjectsPage() {
                   table="projects"
                   id={project.id}
                   confirmMessage={`Delete "${project.title}"?`}
+                  revalidatePaths={["/projects", `/project-details/${project.slug}`]}
                 />
               </td>
             </tr>

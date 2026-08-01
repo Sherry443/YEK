@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   title: "News",
 };
 
+export const revalidate = 3600;
+
 const NewsPage = async () => {
   const supabase = createClient();
   const { data: posts } = await supabase

@@ -66,6 +66,7 @@ export default async function AdminTeamPage() {
                   table="team_members"
                   id={member.id}
                   confirmMessage={`Delete "${member.name}"?`}
+                  revalidatePaths={["/team"]}
                 />
               </td>
             </tr>

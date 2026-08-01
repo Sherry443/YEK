@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
+import { triggerRevalidate } from "@/lib/revalidate";
 import { ImageUploader, MultiImageUploader } from "./ImageUploader";
 import type { ProjectRow } from "@/types/project";
 
@@ -81,6 +82,12 @@ export default function ProjectForm({ project }: { project?: ProjectRow }) {
       setError(error.message);
       return;
     }
+
+    const paths = ["/projects", `/project-details/${payload.slug}`];
+    if (isEdit && project!.slug !== payload.slug) {
+      paths.push(`/project-details/${project!.slug}`);
+    }
+    await triggerRevalidate(paths);
 
     router.push("/admin/projects");
     router.refresh();

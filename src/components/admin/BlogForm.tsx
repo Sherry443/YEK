@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
+import { triggerRevalidate } from "@/lib/revalidate";
 import { ImageUploader } from "./ImageUploader";
 import type { BlogPostRow } from "@/types/blog";
 
@@ -61,6 +62,12 @@ export default function BlogForm({ post }: { post?: BlogPostRow }) {
       setError(error.message);
       return;
     }
+
+    const paths = ["/news", `/news/${payload.slug}`];
+    if (isEdit && post!.slug !== payload.slug) {
+      paths.push(`/news/${post!.slug}`);
+    }
+    await triggerRevalidate(paths);
 
     router.push("/admin/blogs");
     router.refresh();

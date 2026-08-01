@@ -3,15 +3,18 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
+import { triggerRevalidate } from "@/lib/revalidate";
 
 export default function DeleteButton({
   table,
   id,
   confirmMessage = "Are you sure you want to delete this item?",
+  revalidatePaths,
 }: {
   table: string;
   id: string;
   confirmMessage?: string;
+  revalidatePaths?: string[];
 }) {
   const router = useRouter();
   const [deleting, setDeleting] = useState(false);
@@ -25,6 +28,9 @@ export default function DeleteButton({
     if (error) {
       window.alert(`Failed to delete: ${error.message}`);
       return;
+    }
+    if (revalidatePaths?.length) {
+      await triggerRevalidate(revalidatePaths);
     }
     router.refresh();
   };

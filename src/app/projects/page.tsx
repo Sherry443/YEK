@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   title: "Our Projects",
 };
 
+export const revalidate = 3600;
+
 const CausesPage = async () => {
   const supabase = createClient();
   const { data: projects } = await supabase

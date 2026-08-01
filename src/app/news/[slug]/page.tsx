@@ -8,6 +8,8 @@ import { notFound } from "next/navigation";
 import { createClient } from "@/lib/supabase/public";
 import type { BlogPostRow } from "@/types/blog";
 
+export const revalidate = 3600;
+
 export async function generateStaticParams() {
   const supabase = createClient();
   const { data } = await supabase.from("blog_posts").select("slug");

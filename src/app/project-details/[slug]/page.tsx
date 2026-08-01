@@ -7,6 +7,8 @@ import { notFound } from "next/navigation";
 import { createClient } from "@/lib/supabase/public";
 import type { ProjectRow } from "@/types/project";
 
+export const revalidate = 3600;
+
 // ─── Static Params ────────────────────────────────────────────────────────────
 
 export async function generateStaticParams() {

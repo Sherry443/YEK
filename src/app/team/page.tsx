@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   title: "Our Team",
 };
 
+export const revalidate = 3600;
+
 const TeamPage = async () => {
   const supabase = createClient();
   const { data: members } = await supabase

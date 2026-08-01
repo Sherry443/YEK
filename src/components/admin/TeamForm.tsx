@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
+import { triggerRevalidate } from "@/lib/revalidate";
 import { ImageUploader } from "./ImageUploader";
 import type { TeamMemberRow, TeamSection } from "@/types/team";
 
@@ -47,6 +48,8 @@ export default function TeamForm({ member }: { member?: TeamMemberRow }) {
       setError(error.message);
       return;
     }
+
+    await triggerRevalidate(["/team"]);
 
     router.push("/admin/team");
     router.refresh();

@@ -61,6 +61,7 @@ export default async function AdminBlogsPage() {
                   table="blog_posts"
                   id={post.id}
                   confirmMessage={`Delete "${post.title}"?`}
+                  revalidatePaths={["/news", `/news/${post.slug}`]}
                 />
               </td>
             </tr>
