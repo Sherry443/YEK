@@ -1,43 +1,30 @@
-import Link from "next/link";
-
 export const Cta1 = () => {
   return (
-    <section className="cta-banner fix">
+    <section className="cta-banner fix section-padding">
       <div className="container">
-        <div
-          className="cta-banner-wrapper section-padding bg-cover"
-          style={{ backgroundImage: 'url("assets/img/join-cat-bg.jpg")' }}
-        >
-          <div className="row">
-            <div className="offset-xl-5 col-xl-6 col-lg-8 offset-lg-2 col-md-12">
-              <div className="section-title">
-                <span className="sub-title text-white wow fadeInUp">
-                  <i className="far fa-heart" />
-                  Life Changing Video
-                </span>
-                <h2 className="mt-char-animation text-white">
-                  Joel Orphanage Of Ministry Uganda
-                </h2>
-              </div>
-              <div className="button-items mt-4 mt-md-0">
-                <Link
-                  href="projects"
-                  className="theme-btn wow fadeInUp"
-                  data-wow-delay=".3s"
-                >
-                  <i className="fal fa-briefcase" />
-                  Careers
-                </Link>
-                <Link
-                  href="donation-details"
-                  className="theme-btn transparent-btn wow fadeInUp"
-                  data-wow-delay=".5s"
-                >
-                  <i className="fal fa-user" />
-                  Internship
-                </Link>
-              </div>
+        <div className="row align-items-center g-4">
+          <div className="col-lg-8">
+            <div className="section-title mb-0">
+              <span className="sub-title wow fadeInUp">
+                <i className="far fa-heart" />
+                Join Us
+              </span>
+              <h2 className="mt-char-animation">
+                Become a Part of Yaran e Khair
+              </h2>
             </div>
+          </div>
+          <div className="col-lg-4 text-lg-end">
+            <a
+              href="https://forms.cloud.microsoft/r/aNQ55TmKcy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="theme-btn wow fadeInUp"
+              data-wow-delay=".3s"
+            >
+              <i className="fal fa-user-plus" />
+              Apply
+            </a>
           </div>
         </div>
       </div>

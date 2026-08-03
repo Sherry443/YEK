@@ -1,4 +1,5 @@
 import { About1 } from "@/components/About";
+import { Cta1 } from "@/components/Cta";
 import { Donate1 } from "@/components/Donate";
 import { Faq1 } from "@/components/Faq";
 import { HeroSlider1 } from "@/components/HeroSlider";
@@ -22,6 +23,7 @@ const page = () => {
         <Faq1 />
         <Donate1 />
         <Team1 />
+        <Cta1 />
       </DanboxLayout>
     </>
   );
